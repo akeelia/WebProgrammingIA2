@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PetPaws - Invoice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="header-left">
+        <img src="logo.png" alt="logo" class="logo" onerror="this.style.display='none'">
+        <div>
+          <div class="brand">PetPaws</div>
+          <div class="small text-muted">Invoice</div>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Order Invoice</h2>
+      <div class="invoice-container">
+        <div class="invoice-header">
+          <p><strong>Order Date:</strong> <span id="orderDate"></span></p>
+          <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+        </div>
+
+        <section class="invoice-details">
+          <h3>Items Ordered</h3>
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="invoiceItems">
+              <!-- Items will be populated here -->
+            </tbody>
+          </table>
+        </section>
+
+        <section class="invoice-summary">
+          <p>Subtotal: <span id="invoiceSubtotal"></span></p>
+          <p>Tax (15% GCT): <span id="invoiceTax"></span></p>
+          <p class="total">Grand Total: <span id="invoiceTotal"></span></p>
+        </section>
+
+        <section class="shipping-info">
+          <h3>Shipping Information</h3>
+          <p><strong>Name:</strong> <span id="shipName"></span></p>
+          <p><strong>Address:</strong> <span id="shipAddress"></span></p>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html
